@@ -5,7 +5,7 @@ const router = Router();
 
 /**
  * @swagger
- * /api/loan/calculate:
+ * /loan/calculate:
  *   post:
  *     summary: Calculate loan EMI and amortization schedule
  *     tags: [Loan]

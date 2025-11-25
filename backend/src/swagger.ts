@@ -11,17 +11,17 @@ const options = {
     },
     servers: [
       {
-        url: process.env.BASE_URL || 'http://localhost:10000',
-        description: 'API server',
+        url: 'http://localhost:10000',
+        description: 'Local server',
+      },
+      {
+        url: 'https://loan-calculator-4g3z.onrender.com',  // <== YOUR RENDER URL
+        description: 'Production server',
       },
     ],
   },
-  // FIXED: More reliable path matching for TS environments
-  apis: [
-    './src/routes/*.ts',
-    './src/controllers/*.ts',
-    './src/**/*.ts'  // <— this guarantees Swagger finds everything
-  ],
+
+  apis: ['./src/routes/*.ts', './src/controllers/*.ts', './src/**/*.ts'],
 };
 
 const specs = swaggerJsdoc(options);
