@@ -1,10 +1,11 @@
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
-const serverUrl =
-  process.env.NODE_ENV === 'production'
-    ? 'https://loan-calculator-4g3z.onrender.com/api'
-    : 'http://localhost:10000/api';
+const baseFromEnv = process.env.BASE_URL; // set this on Render to your rendered URL (no trailing slash)
+
+const serverUrl = baseFromEnv
+  ? `${baseFromEnv.replace(/\/$/, '')}/api` // use provided URL and append /api
+  : 'http://localhost:10000/api';
 
 const options = {
   definition: {
