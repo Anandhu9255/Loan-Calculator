@@ -1,6 +1,11 @@
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
+const serverUrl =
+  process.env.NODE_ENV === 'production'
+    ? 'https://loan-calculator-4g3z.onrender.com/api'
+    : 'http://localhost:10000/api';
+
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -11,16 +16,11 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:10000/api',
-        description: 'Local server',
-      },
-      {
-        url: 'https://loan-calculator-4g3z.onrender.com/api',
-        description: 'Production server',
+        url: serverUrl,
+        description: 'API Server',
       },
     ],
   },
-
   apis: ['./src/routes/*.ts', './src/controllers/*.ts', './src/**/*.ts'],
 };
 
