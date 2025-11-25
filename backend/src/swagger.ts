@@ -11,11 +11,11 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:10000',
+        url: 'http://localhost:10000/api',
         description: 'Local server',
       },
       {
-        url: 'https://loan-calculator-4g3z.onrender.com',  // <== YOUR RENDER URL
+        url: 'https://loan-calculator-4g3z.onrender.com/api',
         description: 'Production server',
       },
     ],
