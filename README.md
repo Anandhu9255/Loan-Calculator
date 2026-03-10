@@ -6,14 +6,6 @@ A comprehensive financial tool built with **Vanilla JavaScript** that calculates
 
 This system provides a clean, user-friendly interface for complex financial calculations. It handles the mathematical heavy lifting on the frontend, providing instant feedback and ensuring data integrity through strict input validation.
 
-## 🏗️ Architecture
-
-Loan-Calculator/
-├── index.html       # UI Structure & Form elements
-├── style.css        # Responsive layout & custom UI
-├── script.js        # Core mathematical logic & DOM updates
-└── README.md        # Documentation
-
 🚀 Features
 
 ✅ Core Logic Features
@@ -33,8 +25,6 @@ Visual Feedback: Uses CSS transitions to highlight calculation results.
 
 🛠️ Technology Stack
 
-HTML5: Semantic form structure and grouping.
-CSS3: Custom styling using Flexbox and Box-shadows for depth.
 Vanilla JavaScript: Functional logic, Event Listeners, and Math methods.
 
 🚦 Getting Started
